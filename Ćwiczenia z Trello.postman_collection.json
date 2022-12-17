@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "a669b045-507e-42a4-9f45-c6e5fd182ac7",
+		"name": "Ćwiczenia z Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24861159"
+	},
+	"item": [
+		{
+			"name": "https://api.trello.com/1/boards/?name={name}&key=APIKey&token=APIToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=Ćwiczenia z Trello&key={{KeyTrello}}&token={{TokenTrello}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ćwiczenia z Trello"
+						},
+						{
+							"key": "key",
+							"value": "{{KeyTrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{TokenTrello}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.trello.com/1/boards/{id}/lists?name={name}&key=APIKey&token=APIToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/:id/lists?name=Kocham Poniedziałek&key={{KeyTrello}}&token={{TokenTrello}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						":id",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kocham Poniedziałek"
+						},
+						{
+							"key": "key",
+							"value": "{{KeyTrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{TokenTrello}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{BoardID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.trello.com/1/cards?idList=5abbe4b7ddc1b351ef961414&key={{&token=APIToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=639da9d8a9247d002ef0a457&key={{KeyTrello}}&token={{TokenTrello}}&name=Nienawidze weekendu",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "639da9d8a9247d002ef0a457"
+						},
+						{
+							"key": "key",
+							"value": "{{KeyTrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{TokenTrello}}"
+						},
+						{
+							"key": "name",
+							"value": "Nienawidze weekendu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.trello.com/1/cards/{id}?key=APIKey&token=APIToken",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/:id?key={{KeyTrello}}&token={{TokenTrello}}&name=Kocham weekend",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{KeyTrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{TokenTrello}}"
+						},
+						{
+							"key": "name",
+							"value": "Kocham weekend"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{CardID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.trello.com/1/lists/{id}?key=APIKey&token=APIToken",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists/:id?key={{KeyTrello}}&token={{TokenTrello}}&name=Nienawidze poniedziałku",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{KeyTrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{TokenTrello}}"
+						},
+						{
+							"key": "name",
+							"value": "Nienawidze poniedziałku"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{ListID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.trello.com/1/cards/{id}?key=APIKey&token=APIToken",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/:id?key={{KeyTrello}}&token={{TokenTrello}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{KeyTrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{TokenTrello}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "639daab8e60ede00f45cfd96"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.trello.com/1/lists/{id}/closed?key=APIKey&token=APIToken",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists/:id/closed?key={{KeyTrello}}&token={{TokenTrello}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists",
+						":id",
+						"closed"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{KeyTrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{TokenTrello}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.trello.com/1/boards/{id}?key=APIKey&token=APIToken",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/:id?key={{KeyTrello}}&token={{TokenTrello}}&name=Kochamy trello",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{KeyTrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{TokenTrello}}"
+						},
+						{
+							"key": "name",
+							"value": "Kochamy trello"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "639da6d22753df035d03f14e"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "KeyTrello",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TokenTrello",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "BoardID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "CardID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "ListID",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
